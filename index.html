@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="myFirstApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>Coursera - First Angular</title>
+</head>
+<body>
+<h1>Hello Coursera test for students. My first Angular!!</h1>
+    <div ng-controller="MyFirstController">
+        Enter username:   
+        <input type="text" 
+               ng-model="name"
+               ng-blur="upper();"
+               ng-keyup="displayTotal();"/>
+        <div>
+             {{sayHello()}} {{name}}! Your total numeric value is  : {{totalValue}} <br />
+        </div>
+        <div>
+            <button ng-click="changePhoto()">Change photo</button>
+            <br />
+            <img ng-src="images/{{curPhoto}}.jpg" />
+        </div>
+    </div>
+</body>
+</html>
