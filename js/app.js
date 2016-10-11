@@ -34,7 +34,10 @@
 
         $scope.curPhoto = "img10";
         $scope.changePhoto = function () {
-            $scope.curPhoto = "img7";
+            if ($scope.curPhoto == "img7")
+                $scope.curPhoto = "img10";
+            else
+                $scope.curPhoto = "img7";
         }
     }
 
